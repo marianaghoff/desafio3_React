@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
-import dataColab from './database/dataColab';
+import dataColab from './datos/dataColab';
 import { Formulario } from './components/Formulario';
 import { Listado } from './components/Listado';
 import { Buscador } from './components/Buscador';
@@ -10,7 +10,6 @@ import Alert from './components/Alert';
 function App() {
 	const [data, setData] = useState(dataColab);
 	const [filteredData, setFilteredData] = useState([]);
-
 	const [form, setForm] = useState({
 		id: '',
 		nombre: '',
