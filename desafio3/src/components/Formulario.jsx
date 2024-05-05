@@ -4,18 +4,19 @@ import Alert from './Alert';
 
 export const Formulario = ({ onSubmit, onChange, alertMessage  }) => {
 	return (
-		<Form onSubmit={onSubmit}>
-			<Alert message={alertMessage} />
+		<Form className="form" onSubmit={onSubmit}>
+			
 			<Form.Group
-				className="mb-3"
+				className="mb-1"
 				controlId="formBasicEmail"
 			>
-				<Form.Label>Nombre</Form.Label>
+				<h2>Agregar colaborador</h2>
+				<Form.Label></Form.Label>
 				<Form.Control
 					onChange={onChange}
 					name="nombre"
 					type="text"
-					placeholder="Ingresa un nombre"
+					placeholder="Nombre del colaborador"
 				/>
 			</Form.Group>
 
@@ -23,12 +24,12 @@ export const Formulario = ({ onSubmit, onChange, alertMessage  }) => {
 				className="mb-3"
 				controlId="formBasicEmail"
 			>
-				<Form.Label>Email address</Form.Label>
+				<Form.Label></Form.Label>
 				<Form.Control
 					onChange={onChange}
 					name="correo"
 					type="email"
-					placeholder="Enter email"
+					placeholder="Email del colaborador"
 				/>
 			</Form.Group>
 
@@ -36,14 +37,15 @@ export const Formulario = ({ onSubmit, onChange, alertMessage  }) => {
 				className="mb-3"
 				controlId="formBasicEmail"
 			>
-				<Form.Label>Edad</Form.Label>
+				<Form.Label></Form.Label>
 				<Form.Control
 					onChange={onChange}
 					name="edad"
 					type="number"
 					min={1}
 					max={100}
-					placeholder="Ingresa una edad"
+					placeholder="Edad del colaborador"
+					
 				/>
 			</Form.Group>
 
@@ -51,12 +53,12 @@ export const Formulario = ({ onSubmit, onChange, alertMessage  }) => {
 				className="mb-3"
 				controlId="formBasicEmail"
 			>
-				<Form.Label>Cargo</Form.Label>
+				<Form.Label></Form.Label>
 				<Form.Control
 					onChange={onChange}
 					name="cargo"
 					type="text"
-					placeholder="Ingresa un cargo"
+					placeholder="Cargo del colaborador"
 				/>
 			</Form.Group>
 
@@ -64,22 +66,24 @@ export const Formulario = ({ onSubmit, onChange, alertMessage  }) => {
 				className="mb-3"
 				controlId="formBasicEmail"
 			>
-				<Form.Label>Teléfono</Form.Label>
+				<Form.Label></Form.Label>
 				<Form.Control
 					onChange={onChange}
 					name="telefono"
 					type="tel"
-					placeholder="Ingresa un tel"
+					pattern="[0-9]*"
+					placeholder="Teléfono del colaborador"
 				/>
 			</Form.Group>
 
 			
-			<Button
+			<Button className='btn'
 				variant="primary"
 				type="submit"
 			>
-				Submit
+				Agregar colaborador
 			</Button>
+			<Alert message={alertMessage} />
 		</Form>
 	);
 };

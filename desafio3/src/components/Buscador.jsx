@@ -1,18 +1,18 @@
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 export const Buscador = ({ onChange }) => {
 	return (
-		<Form>
+		<Form className='buscador'>
 			<Form.Group
 				className="mb-3"
 				controlId="formBasicEmail"
 			>
-				<Form.Label>Email address</Form.Label>
+				<Form.Label></Form.Label>
 				<Form.Control
 					onChange={onChange}
 					type="search"
-					placeholder="Search..."
+					placeholder="Busca un colaborador"
+			
 				/>
 			</Form.Group>
 		</Form>

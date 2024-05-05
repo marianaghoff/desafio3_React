@@ -38,16 +38,16 @@ export const Listado = ({ users, onDelete, filteredData }) => {
     };
 
     return (
-        <Table striped bordered hover>
+        <Table striped bordered hover size="sm">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Edad</th>
                     <th>Cargo</th>
-                    <th>Telefono</th>
-                    <th>Action</th>
+                    <th>Teléfono</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
